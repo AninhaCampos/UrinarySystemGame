@@ -1,7 +1,4 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     text-decoration: none;
     font-family: 'Pacifico', cursive;
 }
@@ -10,8 +7,7 @@
     width: 30%;
     display: flex;
     margin: 0 auto;
-    margin-top: 8%;
-    margin-bottom: 30px;
+    margin-top: 8%; 
     transition: transform 2.0s ease;
     animation: swing 0.8s infinite;
 }
@@ -50,8 +46,6 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 .button{
@@ -71,7 +65,6 @@ body{
 
 .boneco{
     width: 10%;
-    left: 20px;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
     position: absolute;
     top: calc(40% + 30px);
@@ -103,8 +96,7 @@ body{
 
     .button{
         width: 30%;
-        font-size: 2vh;
-        font-weight: 100;
+        font-size: 3vh;
     }
 }
 
@@ -113,18 +105,16 @@ body{
         width: 12%;
         position: absolute;
         top: calc(50% + 40px);
-        left: calc(20% + 10px);
+        left: calc(17% + 10px);
     }
 
     .balao{
         width: 20%;
         position: absolute;
         top: calc(30% + 30px);
-        left: calc(8% + 10px);
+        left: calc(5% + 10px);
     }
 }
-
-
 
 
 
