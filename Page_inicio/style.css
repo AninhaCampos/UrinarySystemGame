@@ -3,11 +3,32 @@
     font-family: 'Pacifico', cursive;
 }
 
+body{
+    background-color: #b9ae14;
+    position: relative;
+}
+
+button{
+    background-color: #8b0707;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    color: white;
+    background-color: #a50e0e;
+}
+
+#page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .title{
     width: 30%;
-    display: flex;
-    margin: 0 auto;
-    margin-top: 8%; 
     transition: transform 2.0s ease;
     animation: swing 0.8s infinite;
 }
@@ -26,22 +47,6 @@
     }
 }
 
-button{
-    background-color: #8b0707;
-    cursor: pointer;
-    color: white;
-}
-
-button:hover{
-    color: white;
-    background-color: #a50e0e;
-}
-
-body{
-    background-color: #b9ae14;
-    position: relative;
-}
-
 #buttons{
     display: flex;
     align-items: center;
@@ -50,7 +55,7 @@ body{
 
 .button{
     border-radius: 10px;
-    width: 20%;
+    width: 100%;
     height: 9vh;
     margin: 10px;
     border-color: white;  
@@ -64,10 +69,10 @@ body{
 }
 
 .boneco{
-    width: 10%;
+    width: 8%;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
     position: absolute;
-    top: calc(40% + 30px);
+    top: calc(50% + 30px);
     left: calc(25% + 10px);
 
     &:hover {
@@ -78,8 +83,8 @@ body{
 .balao{
     width: 12%;
     position: absolute;
-    top: calc(25% + 30px);
-    left: calc(15% + 10px);
+    top: calc(35% + 30px);
+    left: calc(15% + 20px);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
 
     &:hover {
@@ -89,34 +94,25 @@ body{
 
 @media only screen and (max-width: 768px){
     .title{
-        width: 40%;
-        margin-top: 20%;
+        width: 60%;
         margin-bottom: 15px;
     }
 
     .button{
-        width: 30%;
-        font-size: 3vh;
+        font-size: 4vw;
+        height: 8vh;
     }
-}
 
-@media only screen and (max-width: 900px){
     .boneco{
-        width: 12%;
-        position: absolute;
-        top: calc(50% + 40px);
-        left: calc(17% + 10px);
+        width: 15%;
+        top: calc(55% + 25px);
+        left: calc(12% + 8px);
     }
 
     .balao{
-        width: 20%;
-        position: absolute;
-        top: calc(30% + 30px);
-        left: calc(5% + 10px);
+        width: 25%;
+        top: calc(42% + 55px);
+        left: 1%;
     }
 }
-
-
-
-
 
