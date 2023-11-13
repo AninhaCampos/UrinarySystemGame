@@ -12,6 +12,12 @@ button{
     background-color: #8b0707;
     cursor: pointer;
     color: white;
+    visibility: visible;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
+
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 
 button:hover{
@@ -25,6 +31,23 @@ button:hover{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+}
+
+#config{
+    visibility: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 85vh;
+    border: 1rem solid white;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    background-color: #8b0707;
+    text-align: center;
 }
 
 .title{
@@ -49,7 +72,6 @@ button:hover{
 
 #buttons{
     display: flex;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -63,9 +85,9 @@ button:hover{
     font-size: 2vw;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
 
-    &:hover{
+    /*&:hover{
         transform: scale(1.05);
-    }
+    }*/
 }
 
 .boneco{
@@ -75,9 +97,9 @@ button:hover{
     top: calc(50% + 30px);
     left: calc(25% + 10px);
 
-    &:hover {
+    /*&:hover {
         transform: scale(1.05);
-    }
+    }*/
 }
 
 .balao{
@@ -87,9 +109,9 @@ button:hover{
     left: calc(15% + 20px);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
 
-    &:hover {
+    /*&:hover {
         transform: scale(1.05);
-    }
+    }*/
 }
 
 @media only screen and (max-width: 768px){

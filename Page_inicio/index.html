@@ -11,9 +11,11 @@
     <link
     href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap"
     rel="stylesheet" />
+    <link rel="stylesheet" href="config.js">
 
 </head>
 <body>
+    
     <div id="page">
         <img src="img_index/Congrats_1.png" alt="Urinary Siystem" class="title">
             
@@ -21,9 +23,10 @@
             <a href="game.html">
             <button class="button">Jogar</button>
             </a>
-            <a href="config.html">
-            <button class="button">Confiurações</button>
-            </a>
+
+            <div id="config"></div>
+                <button class="button"  onclick="callConfig()">Confiurações</button>
+
             <a href="creditos.html">
             <button class="button">Créditos</button>
             </a>
@@ -32,6 +35,7 @@
 
     <img src="img_index/boneco-parado.png" class="boneco">
     <img src="img_index/balao[.png" class="balao">
-
+    
+    <script src="config.js"></script>
 </body>
 </html>
