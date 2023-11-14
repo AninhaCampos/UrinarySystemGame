@@ -24,17 +24,20 @@
             <button class="button">Jogar</button>
             </a>
 
-            <div id="config"></div>
+            <div id="overlay">
+                <button id="sair" onclick="exitConfig()">X</button>
+            </div>
                 <button class="button"  onclick="callConfig()">Confiurações</button>
 
-            <a href="creditos.html">
-            <button class="button">Créditos</button>
-            </a>
+                <div id="overlay">
+                    <button id="sair" onclick="exitCredits()">X</button>
+                </div>
+            <button class="button" onclick="callCredits()">Créditos</button>
         </div>
     </div>
 
-    <img src="img_index/boneco-parado.png" class="boneco">
-    <img src="img_index/balao[.png" class="balao">
+    <img src="img_index/boneco-parado.png" id="boneco">
+    <img src="img_index/balao[.png" id="balao">
     
     <script src="config.js"></script>
 </body>
