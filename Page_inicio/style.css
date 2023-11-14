@@ -59,7 +59,7 @@ button:hover{
     width: 90vw;
     height: 85vh;
     border: 1rem solid white;
-    border-radius: 20px;
+    border-radius: 5vw;
     transform: translate(-50%, -50%);
     background-color: #8b0707;
     text-align: center;

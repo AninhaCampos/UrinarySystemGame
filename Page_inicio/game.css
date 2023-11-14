@@ -22,12 +22,66 @@ body {
 
 #casa1{
     top: 8.25vh;
-    left: 8.25vw;
+    left: 8vw;
 }
 #casa2{
     top: 8.25vh;
-    left: 19.25vw;
+    left: 19.75vw;
 }
+#casa3{
+    top: 31vh;
+    left: 19.75vw;
+}
+#casa4{
+    top: 54vh;
+    left: 19.75vw;
+}
+
+#casa5{
+    top: 77vh;
+    left: 19.75vw;
+}
+#casa6{
+    top: 77vh;
+    left: 31.5vw;
+}
+#casa7{
+    top: 77vh;
+    left: 43.25vw;
+}
+#casa8{
+    top: 54vh;
+    left: 43.25vw;
+}
+#casa9{
+    top: 31vh;
+    left: 43.25vw;
+}
+#casa10{
+    top: 8.25vh;
+    left: 43.25vw;
+}
+#casa11{
+    top: 8.25vh;
+    left: 55vw;
+}
+#casa12{
+    top: 8.25vh;
+    left: 66.75vw;
+}
+#casa13{
+    top: 31vh;
+    left: 66.75vw;
+}
+#casa14{
+    top: 54vh;
+    left: 66.75vw;
+}
+#casa15{
+    top: 77vh;
+    left: 66.75vw;
+}
+
 
 .personagem {
     position: absolute;
@@ -37,58 +91,45 @@ body {
     right: 0.75vw;
 }
 .veia-bagulhada {
-    position: absolute; /* Define a posição absoluta */
-    width: 8vw;
-    top: 0.75vh; /* 9% da altura da viewport */
-    left: 0.75vw; /* 20% da largura da viewport */
+    position: absolute; 
+    width: 10vw;
+    top: 0.15vh;
+    right: 0.0001vw; 
 }
 
-
-/* Estilo para a classe 'imagem' compartilhada por todas as imagens */
-/*.imagem {
+.rins {
+    position: absolute;
     width: 8vw;
-    height: 14vh;
-}*/
+    top: 0.75vh; 
+    left: 0.75vw;
+}
 
-/* Estilo para a classe 'bloqueada' compartilhada por todas as imagens */
+.ureter {
+    position: absolute;
+    width: 8vw;
+    top: 0.75vh; 
+    left: 0.75vw;
+}
+
+.bexiga {
+    position: absolute;
+    width: 8vw;
+    top: 1vh; 
+    left: 0.75vw;
+}
+
 .bloqueada {
-    opacity: 0.5; /* Reduz a opacidade para indicar que a imagem está bloqueada */
-    pointer-events: none; /* Desativa eventos de clique na imagem bloqueada */
+    opacity: 0.40;
+    pointer-events: none; 
 }
 
 .desbloqueada{
     opacity: 1;
 }
 
-/* Estilo específico para a classe 'bexiga' */
-.bexiga {
-    position: absolute; /* Define a posição absoluta */
-    top: 33.5vh; /* 32% da altura da viewport */
-    left: 68.5vw; /* 69% da largura da viewport */
-}
-
-/* Estilo específico para a classe 'captura-tela' */
-.captura-tela {
-    position: absolute; /* Define a posição absoluta */
-    top: 10vh; /* 9% da altura da viewport */
-    left: 43vw; /* 44% da largura da viewport */
-}
-
-/* Estilo específico para a classe 'rins' */
-.rins {
-    position: absolute; /* Define a posição absoluta */
-    top: 79vh; /* 77% da altura da viewport */
-    left: 31.5vw; /* 32% da largura da viewport */
-}
-
-/* Estilo específico para a classe 'veia-bagulhada' */
-
-
-
 #home{
     border-radius: 10vw;
     border-width: 10vw;
-    border-color: black;
     color: black;
     width: 4.5vw;
     height: 9.5vh;
