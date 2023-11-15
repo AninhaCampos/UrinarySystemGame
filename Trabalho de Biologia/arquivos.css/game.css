@@ -1,0 +1,256 @@
+*{
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+}
+
+body{
+    background-color: #d6ca1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+button{
+    background-color: #8b0707;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover{
+    color: white;
+    background-color: #a50e0e;
+}
+
+.nefrons{
+    height: 4vw;
+    width: 4vw;
+    position: absolute;
+    top: 11.25vh;
+}
+
+.vidas{
+    left: 85.75vw;
+    position: absolute;
+    top: 3.25vh;
+    font-size: 5vh;
+    color: #8b0707;
+}
+
+#nefron1{
+    left: 78.75vw;
+    display: block;
+}
+
+#nefron2{
+    left: 82.75vw;
+    display: block;
+}
+
+#nefron3{
+    left: 86.75vw;
+    display: block;
+}
+
+#nefron4{
+    left: 90.75vw;
+    display: block;
+}
+
+#nefron5{
+    left: 94.75vw;
+    display: block;
+}
+
+#vaso{
+    height: 9.5vw;
+    width: 13vw;
+    top: 77vh;
+    left: 76.25vw;
+    position: absolute;
+}
+
+.casas{
+    height: 9.5vw;
+    width: 9.5vw;
+    background-color: #4D4900;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 1.5vw;
+}
+
+#casa1{
+    top: 8.25vh;
+    left: 8vw;
+}
+#casa2{
+    top: 8.25vh;
+    left: 19.75vw;
+}
+#casa3{
+    top: 31vh;
+    left: 19.75vw;
+}
+#casa4{
+    top: 54vh;
+    left: 19.75vw;
+}
+
+#casa5{
+    top: 77vh;
+    left: 19.75vw;
+}
+#casa6{
+    top: 77vh;
+    left: 31.5vw;
+}
+#casa7{
+    top: 77vh;
+    left: 43.25vw;
+}
+#casa8{
+    top: 54vh;
+    left: 43.25vw;
+}
+#casa9{
+    top: 31vh;
+    left: 43.25vw;
+}
+#casa10{
+    top: 8.25vh;
+    left: 43.25vw;
+}
+#casa11{
+    top: 8.25vh;
+    left: 55vw;
+}
+#casa12{
+    top: 8.25vh;
+    left: 66.75vw;
+}
+#casa13{
+    top: 31vh;
+    left: 66.75vw;
+}
+#casa14{
+    top: 54vh;
+    left: 66.75vw;
+}
+#casa15{
+    top: 77vh;
+    left: 66.75vw;
+}
+
+#gotaSg {
+    transform: rotate(270deg);
+    position: absolute;
+    width: 8vw;
+    height: 14vh;
+    top: 1.5vw;
+    right: 0.75vw;
+    z-index: 2;
+}
+.veia-bagulhada {
+    position: absolute; 
+    width: 10vw;
+    top: 0.15vh;
+    right: 0.0001vw; 
+    z-index: 1;
+}
+
+.rins {
+    position: absolute;
+    width: 8vw;
+    top: 0.75vh; 
+    left: 0.75vw;
+    z-index: 1;
+}
+
+.ureter {
+    position: absolute;
+    width: 8vw;
+    top: 0.75vh; 
+    left: 0.75vw;
+    z-index: 1;
+}
+
+.bexiga {
+    position: absolute;
+    width: 8vw;
+    top: 1vh; 
+    left: 0.75vw;
+    z-index: 1;
+}
+
+.bloqueada {
+    opacity: 0.40;
+    pointer-events: none; 
+}
+
+.desbloqueada{
+    opacity: 1;
+}
+
+.mapa{
+    height: 90vh;
+    width: 95vw;
+}
+
+#iniciar{
+    left: 3%;
+    top: 80%;
+    position: absolute;
+    border-radius: 10px;
+    width: 12vw;
+    height: 9vh;
+    margin: 10px;
+    border-color: white;  
+    border-width: 5px 5px 5px 5px;
+    font-size: 4vh;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+#next{
+    right: 3%;
+    top: 80%;
+    position: absolute;
+    border-radius: 10px;
+    width: 12vw;
+    height: 9vh;
+    margin: 10px;
+    border-color: white;  
+    border-width: 5px 5px 5px 5px;
+    font-size: 4vh;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+#jogar{
+    background-color: #e67070;
+    border-radius: 10px;
+    width: 15vw;
+    height: 9vh;
+    margin: 10px;
+    border-color: white;  
+    border-width: 5px 5px 5px 5px;
+    font-size: 4vh;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+#jogar:hover{
+    color: white;
+    background-color: #ec8b8b;
+}
