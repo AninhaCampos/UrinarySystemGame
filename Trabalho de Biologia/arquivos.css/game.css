@@ -144,13 +144,13 @@ button:hover{
 }
 
 #gotaSg {
-    transform: rotate(270deg);
-    position: absolute;
-    width: 8vw;
-    height: 14vh;
-    top: 1.5vw;
-    right: 0.75vw;
-    z-index: 2;
+    position: absolute; 
+    width: 12vw;
+    top: 3vh;
+    align-items: center;
+    right: -1vw; 
+    z-index: 1;
+    
 }
 .veia-bagulhada {
     position: absolute; 
@@ -254,3 +254,17 @@ button:hover{
     color: white;
     background-color: #ec8b8b;
 }
+
+.timer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+  }
+  .timer #time {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    padding-left: 0.5rem;
+    color: #f2f2f2;
+  }

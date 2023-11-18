@@ -6,7 +6,7 @@ const questions = [
     },
     {
         question: "Sobre o sistema urinário feminino e masculino é correto afirmar que:",
-        options: ["O sistema urinário feminino e masculino são idênticos.","O sistema urinário feminino e masculino diferem na quantidade de vias urinárias.","O sistema urinário feminino e masculino diferem no tamanho da uretra.","O sistema urinário feminino e masculino diferem no tamanho da uretra.","O sistema urinário feminino e masculino apresentam as mesmas funções."],
+        options: ["O sistema urinário feminino e masculino são idênticos.","O sistema urinário feminino e masculino diferem na quantidade de vias urinárias.","O sistema urinário feminino e masculino diferem no tamanho da uretra.","O sistema urinário feminino e masculino apresentam as mesmas funções."],
         optionCorreta: "O sistema urinário feminino e masculino diferem no tamanho da uretra.",
     },
     {
@@ -67,7 +67,7 @@ const questions = [
     {
         question: "Sistema Urinário: Em caso de hipertensão, recomenda-se uma dieta sem sal, porque este atua:",
         options: ["Diminuindo o volume de sangue circulante.","Aumentando o volume de sangue circulante.","Reduzindo o calibre dos vasos sanguíneos.","Dilatando o calibre dos vasos sanguíneos.","Obstruindo os capilares arteriais com placas de ateroma."],
-        optionCorreta: "Aumentando o volume de sangue circulante.aumentando o volume de sangue circulante.",
+        optionCorreta: "Aumentando o volume de sangue circulante.",
     },
     {
         question: "Uma pessoa passará a excretar maior quantidade de uréia se aumentar, em sua dieta alimentar, a quantidade de:",
@@ -78,7 +78,7 @@ const questions = [
     {
         question: "“As fezes e auréia são resíduos produzidos  pelos mamíferos. Entretanto somente um deles é considerado excreção”. Escolha a alternativa que condiz com este enunciado:",
         options: ["as fezes, porque resultam da atividade de absorção deágua pelo intestino grosso.","a ureia, porque é produzida por células flama, as quais são encontradas nos rins dos mamíferos.","as fezes, porque resultam da ação da flora intestinal.","a ureia, por ser uma substância nitrogenada tóxica produzida durante o metabolismo celular."],
-        optionCorreta: "Infecção urinária e cálculo renal",
+        optionCorreta: "a ureia, por ser uma substância nitrogenada tóxica produzida durante o metabolismo celular.",
     },
   
     {
@@ -86,22 +86,22 @@ const questions = [
         options: ["oxigenar o sangue desses pacientes, uma vez que uma menor quantidade de gás oxigênio é liberada em sua corrente sanguínea.","nutrir o sangue desses pacientes, uma vez que sua capacidade de absorver nutrientes orgânicos está diminuída","retirar o excesso de gás carbônico que se acumula no sangue desses pacientes.","retirar o excesso de glicose, proteínas e lipídios que se acumula no sangue desses pacientes.","retirar o excesso de íons e resíduos nitrogenados que se acumula no sangue desses pacientes."],
         optionCorreta: "retirar o excesso de íons e resíduos nitrogenados que se acumula no sangue desses pacientes.",
     },
-    /*
+    
     {
-        question: ,
+        question: 'b',
         options: ["Diabetes e hipertensão","Asma e bronquite","Câncer de pulmão e enfisema","Infecção urinária e cálculo renal"],
         optionCorreta: "Infecção urinária e cálculo renal",
     },
     {
-        question: ,
+        question: 'a',
         options: ["Diabetes e hipertensão","Asma e bronquite","Câncer de pulmão e enfisema","Infecção urinária e cálculo renal"],
         optionCorreta: "Infecção urinária e cálculo renal",
     },
     {
-        question: ,
+        question: 'c',
         options: ["Diabetes e hipertensão","Asma e bronquite","Câncer de pulmão e enfisema","Infecção urinária e cálculo renal"],
         optionCorreta: "Infecção urinária e cálculo renal",
-    },*/
+    },
 ];
 
 let cont_perg = 0;
@@ -119,6 +119,7 @@ function carregarPergunta(){
     clearOverlay('sn','correct');
     callHow('overlay','quiz-div');
     const perg_atual = questions[cont_perg];
+    startTimer();
     texto_quest.textContent = perg_atual.question;
     opcoes.innerHTML = "";
     perg_atual.options.forEach((option) => {
@@ -137,19 +138,19 @@ function verifica_resposta(event){
     if (resp_usuario === perg_atual.optionCorreta){
         score++;
         desbloqueado = true;
-        window.addEventListener("keydown", moverBoneco);
+        
         //limpa overlay e o quiz e exibe a mensagem de acerto
         clearOverlay('sn','erro'); 
         clearOverlay('sn','perdeu');
         clearOverlay('overlay','quiz-div'); 
         callHow('sn','correct');
-
+        
         //exibe a mensagem de acerto por 3 segundos
         const div = document.getElementById('sn');
         setTimeout(function (){
             clearOverlay('sn','correct')
         }, 3000);
-
+        verificarResposta();
     } else{
         vidas--;
         errou = false;
@@ -159,7 +160,7 @@ function verifica_resposta(event){
         clearOverlay('sn','perdeu'); 
         callHow('sn','erro');
 
-        //exibe a mensagem de acerto por 3 segundos
+        //exibe a mensagem de erro por 3 segundos
         const div = document.getElementById('sn');
         setTimeout(function (){
             clearOverlay('sn','erro')
@@ -185,7 +186,7 @@ function verifica_resposta(event){
             clearOverlay('overlay','quiz-div'); 
             callHow('sn','perdeu');
             clearBnt('next');
-            iniciarQuiz()
+            carregarPergunta();
         }else {
             texto_quest.textContent = "Quiz concluído!";
             opcoes.innerHTML = ""; 
@@ -194,12 +195,10 @@ function verifica_resposta(event){
         }
      });
 
-     function iniciarQuiz() {
-        window.addEventListener("keydown", moverBoneco);
-        carregarPergunta();
-    }
+    carregarPergunta();
     
-    iniciarQuiz()
+    
+    
 
 
 
