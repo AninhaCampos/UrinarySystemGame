@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urinary System Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap"
+    rel="stylesheet" />
+
+    <!--arquivos CSS-->
+    <link rel="stylesheet" href="/Trabalho de Biologia/arquivos.css/index.css">
+    <link rel="stylesheet" href="/Trabalho de Biologia/arquivos.css/overlay.css">
+
+</head>
+
+<body>
+    <div id="page">
+        <img src="/Trabalho de Biologia/imgs/Congrats_1.png" alt="Urinary Siystem" class="title_game">
+            
+        <div id="buttons">
+            <a href="game.html"><button id="button">Jogar</button></a>
+            <button id="button" onclick="callOverlay('credits','overlay','system')">Como jogar</button>
+            <button id="button" onclick="callOverlay('system','overlay','credits')">Créditos</button>
+        </div>
+    </div>
+
+    <!--
+    <img src="img_index/boneco-parado.png" class="boneco">
+    <img src="img_index/balao.png" class="balao">
+    S-->
+
+    <div id="overlay"> 
+        <button id="X" onclick="clearOverlay('overlay','system')">
+            <img src="/Trabalho de Biologia/imgs/X.png" id="X">
+        </button>
+        <div id="system">
+            <h3 class="title">Instruções para Jogar o Jogo do Sistema Urinário:</h3>
+            <div class="form">
+                <p class="p"> 
+                    Objetivo:
+                    <br>
+                    - Avance pelo sistema urinário respondendo a perguntas para alcançar ou ultrapassar 15 acertos.
+                    <br><br>
+                    <!--IMAGEM DO MAPA-->
+                    Vidas (Nefrons):
+                    <!--IMAGEM DO MAPA-->
+                    <br>
+                    - Comece com 5 nefrons. <br>
+                    - Perca um nefron por resposta incorreta. <br>
+                    - O jogo termina ao perder todos os nefrons.
+                    <br><br>
+                    Como Iniciar:
+                    <br>
+                    - Clique em "Jogar" e depois em "Iniciar Jogo" no canto inferior esquerdo.
+                    <br><br>
+                    Desfrute do jogo educativo e boa sorte explorando o sistema urinário!
+                </p>                
+            </div>
+        </div>
+
+        <button id="X" onclick="clearOverlay('overlay','credits')">
+            <img src="/Trabalho de Biologia/imgs/X.png" id="X">
+        </button>
+
+        <div id="credits">
+            <h3 class="title">Créditos</h3>
+            <div class="name">Ana Luiza</div>
+            <div class="name">Estevão Viana</div>
+            <div class="name">Lucas Lenz</div>
+            <div class="name">Mariane</div>                
+            <div class="name">Pedro Lucas</div>
+            <div class="name">Rafael Torres</div>
+            <div class="name">Rickson Gabriel</div>
+            <div class="name">Samuel Matias</div>                
+        </div>
+    </div>
+
+    <!--arquivos JS-->
+    <script src="/Trabalho de Biologia/arquivos.js/overlay.js"></script>
+</body>
+</html>

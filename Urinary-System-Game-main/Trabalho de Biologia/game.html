@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urinary System Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap"
+    rel="stylesheet" />
+
+
+    <!--arquivos CSS-->
+    <link rel="stylesheet" href="/Trabalho de Biologia/arquivos.css/game.css">
+    <link rel="stylesheet" href="/Trabalho de Biologia/arquivos.css/overlay.css">
+    <link rel="stylesheet" href="/Trabalho de Biologia/arquivos.css/quiz.css">
+   
+    
+</head>
+<body>
+
+    <div class="casas" id="casa1"><img src="/Trabalho de Biologia/imgs/gotaSangue.png" id="gotaSg"></div>
+    <div class="casas" id="casa2"><img src="/Trabalho de Biologia/imgs/veia bagulhada.png" class="bloqueada veia-bagulhada"></div>
+    <div class="casas" id="casa3"></div>
+    <div class="casas" id="casa4"></div>
+    <div class="casas" id="casa5"></div>
+    <div class="casas" id="casa6"><img src="/Trabalho de Biologia/imgs/rins.png" class="bloqueada rins"></div>
+    <div class="casas" id="casa7"></div>
+    <div class="casas" id="casa8"></div>
+    <div class="casas" id="casa9"></div>
+    <div class="casas" id="casa10"><img src="/Trabalho de Biologia/imgs/ureter.png" class="bloqueada ureter"></div>
+    <div class="casas" id="casa11"></div>
+    <div class="casas" id="casa12"></div>
+    <div class="casas" id="casa13"><img src="/Trabalho de Biologia/imgs/bexiga.png" class="bloqueada bexiga"></div>
+    <div class="casas" id="casa14"></div>
+    <div class="casas" id="casa15"></div>
+    <img src="/Trabalho de Biologia/imgs/vaso.png" id="vaso">
+
+    <p class="vidas">Vidas</p>
+    <img src="/Trabalho de Biologia/imgs/nefron.png" class="nefrons" id="nefron1">
+    <img src="/Trabalho de Biologia/imgs/nefron.png" class="nefrons" id="nefron2">
+    <img src="/Trabalho de Biologia/imgs/nefron.png" class="nefrons" id="nefron3">
+    <img src="/Trabalho de Biologia/imgs/nefron.png" class="nefrons" id="nefron4">
+    <img src="/Trabalho de Biologia/imgs/nefron.png" class="nefrons" id="nefron5">
+
+</body>
+
+    <button id="iniciar" onclick="callOverlay('quiz-div','overlay','how')">Iniciar Jogo</button>
+    <button id="next" onclick="callOverlay('how','overlay','quiz-div')">Próxima pergunta</button>
+
+
+    <div id="overlay"> 
+        <button id="X" onclick="clearOverlay('overlay','how')">
+            <img src="/Trabalho de Biologia/imgs/X.png" id="X">
+        </button>
+
+            <div id="how">
+                <h3 class="title">Como Jogar</h3>
+                <div class="form">
+                    <p class="p"> 
+                        Este jogo é de tipo de tabuleiro.
+                        <br><br>
+                        A cada pergunta acertada o jogador anda uma casa dentro do mapa.
+                        <br><br>
+                        <!--IMAGEM DO MAPA-->
+                        O jogador possui 5 vidas.
+                        <!--IMAGEM DO MAPA-->
+                    </p>      
+                    <button id="jogar" onclick="callOverlay('how','overlay','quiz-div')" onclick="clearBnt('iniciar')">Jogar</button>          
+                </div>       
+            </div>
+
+
+
+        <button id="X" onclick="clearOverlay('overlay','quiz-div')">
+            <img src="/imgs/X.png" id="X">
+        </button>
+
+            <div id="quiz-div">
+                <div class="timer">
+                    <h4 id="time">00:00</h4>
+                    <canvas
+                      id="myCanvas"
+                      width="5000"
+                      height="40"
+                      style="border: 0px; display: inline-block"></canvas>
+                  </div>
+                    <div class="form">
+                        <div id="question-container">
+                            <p id="texto-questao">Questão aqui</p>
+                        </div>
+                        <div id="barra-opcoes">
+                            <button class="option">Opção 1</button>
+                            <button class="option">Opção 2</button>
+                            <button class="option">Opção 3</button>
+                            <button class="option">Opção 4</button>
+                        </div>
+                        <div id="resultado-div">
+                            <p id="texto-resp"></p>
+                        </div>       
+                    </div>
+            </div>
+    </div>
+            
+            <div id="sn">
+                <div id="correct">
+                    <p class="p1">
+                        Parabéns!
+                    </p><br>
+                        <p class="p2">
+                            Você acertou a resposta, <br>
+                            ande uma casa para frente! 
+                        </p>
+                </div>
+
+                <div id="erro">
+                    <p class="p1">
+                        Preste mais atenção!
+                    </p><br>
+                        <p class="p2">
+                            Você errou a resposta, <br>
+                            permaneça no mesmo lugar! 
+                        </p>
+                </div>
+
+                <div id="perdeu">
+                    <button id="X" onclick="clearOverlay('sn','perdeu')">
+                        <img src="/imgs/X.png" id="X">
+                    </button>
+                    <p class="p1">
+                        Você perdeu o jogo!
+                    </p><br>
+                        <p class="p2">
+                            Tente na próxima vez!
+                        </p>
+                </div>
+            </div>
+
+            
+
+    <!--arquivos JS-->
+    <script src="/arquivos.js/movimentos.js"></script>
+    <script src="/arquivos.js/overlay.js"></script>
+    <script src="/arquivos.js/timer.js"></script>
+    <script src="/arquivos.js/quiz.js"></script>
+    <script src="/arquivos.js/vidas.js"></script>
+    <script>
+        clearOverlay('overlay','how')
+    </script>
+</body>
+</html>
