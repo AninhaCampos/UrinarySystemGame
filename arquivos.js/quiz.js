@@ -13,7 +13,7 @@ function carregarPergunta(){
     clearOverlay('sn','erro');
     const perg_atual = questions[cont_perg];
     startTimer();
-    iniciarTempo()
+    /*iniciarTempo();*/
     texto_quest.textContent = perg_atual.question;
     opcoes.innerHTML = "";
     perg_atual.options.forEach((option) => {
@@ -74,7 +74,7 @@ function verifica_resposta(event){
         buttonProx.style.display = "block";
 }
 
-     iniciar.addEventListener("click", () => {
+    iniciar.addEventListener("click", () => {
         if(cont_perg < questions.length && cont_perg == 0){ 
             callHow('overlay','quiz-div')       
             carregarPergunta();
@@ -87,16 +87,16 @@ function verifica_resposta(event){
             carregarPergunta();
             //buttonProx.style.display = "none"; //ISSO SOME O BOTÃO E BUGA APARECENDO O "Iniciar Jogo"
         }else if(vidas == 0){
+            /*pararTempo();*/
             clearOverlay('overlay','quiz-div'); 
             clearOverlay('sn','erro'); 
             callHow('sn','perdeu');
-            pararTempo();
         }else {
+            /*pararTempo();*/
             clearOverlay('overlay','quiz-div');
             callHow('sn','ganhou');
-            pararTempo();
         }
-     });
+    });
 
     function reiniciarQuiz(){
         cont_perg = 0;

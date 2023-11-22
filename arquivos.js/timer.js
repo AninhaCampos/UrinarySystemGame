@@ -12,22 +12,23 @@ function startTimer() {
   clearTimer()
   
   timer.style.display = 'flex'
-  segundos = 0
-  milissegundos = 0
+  segundos = 30
+  milissegundos = 10
   x = 0
   intervalId = setInterval(updateTimer, 10)  
 }
 
 function updateTimer() {
 
-  if (segundos == 25){
+
+  milissegundos--;
+
+  if (segundos == 0){
     stopTimer();
   }
-  
-  milissegundos++;
   if (milissegundos % 100 == 0){
-    milissegundos -= 100;
-    segundos++;
+    segundos--;
+    milissegundos = 100;
   }
 
     document.getElementById('time').innerHTML = `${segundos}:${milissegundos}`
@@ -58,38 +59,38 @@ function animate() {
   timerCtx.fillStyle = 'rgb(200, 60, 100)'
   timerCtx.fill()
   timerCtx.closePath()
-  x = x + window.innerWidth / 4000
+  x = x + window.innerWidth / 3350
 }
 
 //Para o Timer Global
 
-var intervalId
-var unidade
-var unidade_sem_decimal
-var dezena
+/*var intervalId2
+var unidade//segundos
+var unidade_sem_decimal//segundos sem decimal
+var dezena//minutos
 unidade = 1
 dezena = 0
 
 function iniciarTempo(){
-  
-
-  intervalId = setInterval(rodarTempo, 100)
-}
-
-function pararTempo(){
-  clearInterval(intervalId)
+  intervalId2 = setInterval(rodarTempo, 10)//intervalo pra aumentar os segundos
 }
 
 function rodarTempo(){
 
   unidade += 0.1;
 
-  if(unidade % 60 == 0){
+  if(unidade % 600 == 0){//se a unid for divisivel por 60, aumenta minutos e diminui os segundos
     dezena++;
-    unidade -= 60;
+    unidade -= 600;//NAO FUNCIONA
   }
-  unidade_sem_decimal = Math.trunc(unidade);
-  document.getElementById('timer-global').innerHTML = `${dezena}:${unidade_sem_decimal}`
+  unidade_sem_decimal = Math.trunc(unidade); //arredonda as unidades
+  document.getElementById('timer-global').innerHTML = `${dezena}:${unidade_sem_decimal}`//exibe o timer la
 }
 
-document.getElementById("iniciar").addEventListener("click", iniciarTempo());
+function pararTempo(){
+  clearInterval(intervalId2)//PARA O TEMPO
+}
+
+
+
+document.getElementById("iniciar").addEventListener("click", iniciarTempo);*/
