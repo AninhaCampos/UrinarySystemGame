@@ -101,10 +101,13 @@ button:hover{
         margin-bottom: 15px;
     }
 
-    .button{
+    #button{
         font-size: 3vh;
+        width: 30vw;
+        height: 10vh;
     }
 
+    /*
     .boneco{
         display: none;
     }
@@ -112,6 +115,7 @@ button:hover{
     .balao{
         display: none;
     }
+    */
 }
 
 

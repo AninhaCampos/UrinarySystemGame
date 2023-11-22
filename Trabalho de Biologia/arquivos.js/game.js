@@ -1,3 +1,4 @@
+/*
 let vidas = 5;
 let acertos = 0;
 let tempoInicial = Date.now();
@@ -35,3 +36,4 @@ function mostrarPergunta() {
 
 // Adicione um evento de clique ao botão
 document.getElementById('mostrarPergunta').addEventListener('click', mostrarPergunta);
+*/

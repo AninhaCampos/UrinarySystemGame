@@ -22,28 +22,38 @@ body{
     margin: 0 auto;
     padding: 1px;
     color: white;
-    font-size: 3rem;
     height: 100%;
     max-height: 100%;
 }
 
 #barra-opcoes{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+}
+
+#question-container{
+    padding: 15px;
+}
+
+#texto-questao{
+    font-size: 2em;
 }
 
 .option{
     background-color: #e67070;
-    font-size: 1.5rem;
+    font-size: 2em;
     display: block;
     width: 40%;
     padding: 10px;
     margin: 10px 0;
     cursor: pointer;
     border-width: 5px 5px 5px 5px;
-    border-radius: 5px;
+    border-radius: 2vw;
     border-color: white;  
+    height: 20vh;
+
 }
 
 .option:hover{
@@ -55,6 +65,7 @@ body{
     margin-top: 20px;
 }
 
+/*
 #explicacao{
     display: none;
 	background-color: #D3D3D3;
@@ -65,7 +76,7 @@ body{
     max-width: 70%;
     margin: 0 auto;
 	margin-top: 30px;
-}
+}*/
 
 #next{
     background-color: #8b0707;

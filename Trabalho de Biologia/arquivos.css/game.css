@@ -31,36 +31,38 @@ button:hover{
 }
 
 .vidas{
-    left: 85.75vw;
+    left: 83.75vw;
     position: absolute;
     top: 3.25vh;
-    font-size: 5vh;
+    font-size: 2em;
     color: #8b0707;
+}
+
+@media screen and (max-width: 768px) {
+    .vidas{
+        font-size: 1.5em;
+        left: 84vw;
+    }
 }
 
 #nefron1{
     left: 78.75vw;
-    display: block;
 }
 
 #nefron2{
     left: 82.75vw;
-    display: block;
 }
 
 #nefron3{
     left: 86.75vw;
-    display: block;
 }
 
 #nefron4{
     left: 90.75vw;
-    display: block;
 }
 
 #nefron5{
     left: 94.75vw;
-    display: block;
 }
 
 #vaso{
@@ -149,9 +151,21 @@ button:hover{
     top: 3vh;
     align-items: center;
     right: -1vw; 
-    z-index: 1;
-    
+    z-index: 2;
+    transform: rotate(270deg);  
 }
+
+#gotaMj {
+    position: absolute; 
+    width: 12vw;
+    top: 3vh;
+    align-items: center;
+    right: -1vw; 
+    z-index: 2;
+    transform: rotate(270deg);  
+    display: none;
+}
+
 .veia-bagulhada {
     position: absolute; 
     width: 10vw;
@@ -184,21 +198,20 @@ button:hover{
     z-index: 1;
 }
 
+
 .bloqueada {
     opacity: 0.40;
     pointer-events: none; 
 }
 
+/*
 .desbloqueada{
     opacity: 1;
 }
+*/
 
-.mapa{
-    height: 90vh;
-    width: 95vw;
-}
 
-#iniciar{
+#iniciar, #next{
     left: 3%;
     top: 80%;
     position: absolute;
@@ -216,13 +229,22 @@ button:hover{
     }
 }
 
+#iniciar{
+    display: block;
+}
+
 #next{
-    right: 3%;
-    top: 80%;
+    display: none;
+}
+
+#reiniciar{
+    background-color: #e67070;
+    cursor: pointer;
+    color: white;
     position: absolute;
     border-radius: 10px;
-    width: 12vw;
-    height: 9vh;
+    width: 10vw;
+    height: 8vh;
     margin: 10px;
     border-color: white;  
     border-width: 5px 5px 5px 5px;
@@ -234,25 +256,19 @@ button:hover{
     }
 }
 
-#jogar{
-    background-color: #e67070;
-    border-radius: 10px;
-    width: 15vw;
-    height: 9vh;
-    margin: 10px;
-    border-color: white;  
-    border-width: 5px 5px 5px 5px;
-    font-size: 4vh;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
-
-    &:hover{
-        transform: scale(1.05);
-    }
-}
-
-#jogar:hover{
+#reiniciar:hover{
     color: white;
     background-color: #ec8b8b;
+}
+
+@media screen and (max-width: 768px) {
+    #iniciar, #next{
+        font-size: 3vh;
+        width: 25vw;
+        height: 8vh;
+        top: 90%;
+        margin: 0px;
+    }
 }
 
 .timer {

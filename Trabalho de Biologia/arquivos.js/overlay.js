@@ -14,6 +14,7 @@ function clearOverlay(o,d){
     document.getElementById(d).style.display = "none";
 }
 
-function clearBnt(d){
+function clearBnt(d,e){
     document.getElementById(d).style.display = "none";
+    document.getElementById(e).style.display = "block";
 }

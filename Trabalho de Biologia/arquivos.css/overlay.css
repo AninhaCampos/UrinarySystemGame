@@ -28,14 +28,15 @@ button{
 
 #X{
     position: absolute;
-    top: -10px; 
-    right: -10px; 
+    top: -15px; 
+    right: -15px; 
     border: none;
     background: none;
     border: none;
     outline: none;
     width: 5vw;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s all;
+    z-index: 2;
 
     &:hover {
       transform: scale(1.05);
@@ -55,44 +56,13 @@ button{
     font-size: 3.0rem;
 }
 
+@media (max-width: 768px) {
+  .title{
+    font-size: 2rem;
+  }
+}
+
 /*FIM da estilização "geral"*/
-
-
-/*INÍCIO da estilização "system"*/
-
-.form{
-    border-top: 1px solid white;
-    padding: 2rem 2rem 2rem 2rem;
-}
-
-#system{  
-    padding: 1px;
-    color: white;
-    font-size: 2.5rem;
-    margin: 0;
-    height: 100%;
-    overflow-y: scroll;
-    max-height: 100%;
-}
-
-#system::-webkit-scrollbar {
-  width: 12px;
-}
-#system::-webkit-scrollbar-track {
-  padding: 10px;
-}
-#system::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 50px;
-}
-#system::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-#system::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-/*FIM da estilização "system"*/
 
 /*INÍCIO da estilização "credits"*/
 
@@ -166,7 +136,13 @@ background: rgba(255, 255, 255, 0.8);
 background: rgba(255, 255, 255, 0.4);
 }
 
-/*FIM da estilização "como jogar-GAME.HTML"*/
+@media (max-width: 768px) {
+  #credits, #how{
+    font-size: 1.5rem;
+  }
+}
+
+/*FIM da estilização "como jogar"*/
 
 /*INÍCIO da estilização "sn-GAME.HTML*/
 
@@ -182,9 +158,19 @@ background: rgba(255, 255, 255, 0.4);
   transform: translate(-50%, -50%);
   background-color: #8b0707;
   z-index: 3;
+  text-align: center;
+  /*centralizar*/
 }
 
-#correct, #erro, #perdeu{
+@media (max-width: 768px) {
+  #sn{
+    max-width: 95vw;
+    width: 90%;
+    height: 60%;
+  }
+}
+
+#correct, #erro, #perdeu, #ganhou, #urina{
   padding: 1px;
   color: white;
   margin: 0;
@@ -193,15 +179,31 @@ background: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  #correct, #erro, #perdeu, #ganhou, #urina{
+    font-size: 1rem;
+  }
+}
+
+#mija{
+  position: absolute;
+  width: 5em;
+}
+
 .p1{
   font-size: 2.5rem;
   border-bottom: 1px solid white;
   padding: 1rem 1rem 1rem 1rem;
 }
 
+@media (max-width: 768px) {
+  #p1{
+    font-size: 1.5rem
+  }
+}
+
 .p2{
   font-size: 1.5rem;
-  padding: 1rem 1rem 1rem 1rem;
 }
 
 

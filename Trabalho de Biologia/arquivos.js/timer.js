@@ -2,39 +2,57 @@ const timer = document.querySelector('.timer')
 const c = document.getElementById('myCanvas')
 const timerCtx = c.getContext('2d')
 
-var segundos = 0
+var segundos 
 var intervalId
 var timeoutId
 var x = 0
 
-function seconds() {
-  document.getElementById('time').innerHTML = `${
-    (Math.floor(segundos / 1000) < 10 ? '0' : '') + Math.floor(segundos / 1000)
-  }:${Math.floor((segundos % 1000) / 10)}`
-  requestAnimationFrame(animate)
-  segundos += 1000 / (10 / 3 / 0.4)
-}
-
 function startTimer() {
+  clearInterval(intervalId)
   clearTimer()
   
   timer.style.display = 'flex'
   segundos = 0
+  milissegundos = 0
   x = 0
-  intervalId = setInterval(seconds, 1000 / (10 / 3 / 0.4))
-  timeoutId = setTimeout(() => {
-    stopTimer()
-    setTimeout(closeOverlay, 500)
-  }, 25*1000 )
+  intervalId = setInterval(updateTimer, 10)  
+}
+
+function updateTimer() {
+
+  if (segundos == 25){
+    stopTimer();
+  }
+  
+  milissegundos++;
+  if (milissegundos % 100 == 0){
+    milissegundos -= 100;
+    segundos++;
+  }
+
+    document.getElementById('time').innerHTML = `${segundos}:${milissegundos}`
+    requestAnimationFrame(animate)
   
 }
+
+/*function seconds() {
+  document.getElementById('time').innerHTML = `${
+    (Math.floor(segundos / 60) <= 25.00) + Math.floor(segundos / 1000)
+  }:${Math.floor((segundos % 1000) / 10)}`
+  requestAnimationFrame(animate)
+  segundos += 1000 
+}*/
+
 function closeOverlay(){
   clearOverlay('overlay','quiz-div')
+  clearBnt('iniciar','next');
 }
+
 function stopTimer() {
   clearInterval(intervalId)
-  clearTimeout(timeoutId)
-  return segundos
+  closeOverlay();
+  segundos = 0
+  milissegundos = 0
 }
 
 function clearTimer() {
@@ -44,9 +62,9 @@ function clearTimer() {
 
 function animate() {
   timerCtx.beginPath()
-  timerCtx.arc(x, 20, 20, 0, 2 * Math.PI)
-  timerCtx.fillStyle = 'rgb(166, 49, 172)'
+  timerCtx.arc(x, 20, 20, 0, 10 * Math.PI)
+  timerCtx.fillStyle = 'rgb(200, 60, 100)'
   timerCtx.fill()
   timerCtx.closePath()
-  x = x + window.innerWidth / 250
+  x = x + window.innerWidth / 4000
 }
