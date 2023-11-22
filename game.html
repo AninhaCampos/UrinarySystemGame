@@ -43,6 +43,11 @@
         <img src="imgs/nefron.png" class="nefrons" id="nefron3">
         <img src="imgs/nefron.png" class="nefrons" id="nefron4">
         <img src="imgs/nefron.png" class="nefrons" id="nefron5">
+        
+        <!--<div class="relogio">
+            <p id="timer-global"></p>
+        </div>-->
+        <p id="timer-global"></p>
 
     <button id="iniciar" onclick="callHow('overlay','quiz-div')">Iniciar Jogo</button>
     <button id="next" onclick="callHow('overlay','quiz-div')">Próxima pergunta</button>
@@ -117,6 +122,8 @@
                     </p><br>
                         <p class="p2">
                             Suas vidas acabaram, tente na próxima vez!
+                            <br>
+                            Tempo: <p id="timer-global"></p>
                         </p>
                         <button id="reiniciar" onclick="reiniciarQuiz()">Reiniciar</button>
                 </div>
@@ -130,6 +137,8 @@
                     </p><br>
                         <p class="p2">
                             Você ganhou o jogo!
+                            <br>
+                            Tempo: <p id="timer-global"></p>
                         </p>
                 </div>
             </div>

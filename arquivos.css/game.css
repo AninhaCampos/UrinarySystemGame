@@ -277,10 +277,24 @@ button:hover{
     left: 0;
     display: none;
     align-items: center;
-  }
-  .timer #time {
+}
+.timer #time {
     font-family: "Montserrat", sans-serif;
     position: absolute;
     padding-left: 0.5rem;
     color: #f2f2f2;
-  }
+}
+
+#timer-global{
+    position: absolute;
+    left: 88vw;
+    top: 15.25vw;
+    font-size: 2vw;
+    z-index: 3;
+}
+
+/*.relogio{
+    bottom: 10vw;
+    left: 40vw;
+    position: relative;
+}*/

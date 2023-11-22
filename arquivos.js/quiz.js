@@ -13,6 +13,7 @@ function carregarPergunta(){
     clearOverlay('sn','erro');
     const perg_atual = questions[cont_perg];
     startTimer();
+    iniciarTempo()
     texto_quest.textContent = perg_atual.question;
     opcoes.innerHTML = "";
     perg_atual.options.forEach((option) => {
@@ -89,9 +90,11 @@ function verifica_resposta(event){
             clearOverlay('overlay','quiz-div'); 
             clearOverlay('sn','erro'); 
             callHow('sn','perdeu');
+            pararTempo();
         }else {
             clearOverlay('overlay','quiz-div');
             callHow('sn','ganhou');
+            pararTempo();
         }
      });
 

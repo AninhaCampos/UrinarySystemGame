@@ -35,14 +35,6 @@ function updateTimer() {
   
 }
 
-/*function seconds() {
-  document.getElementById('time').innerHTML = `${
-    (Math.floor(segundos / 60) <= 25.00) + Math.floor(segundos / 1000)
-  }:${Math.floor((segundos % 1000) / 10)}`
-  requestAnimationFrame(animate)
-  segundos += 1000 
-}*/
-
 function closeOverlay(){
   clearOverlay('overlay','quiz-div')
   clearBnt('iniciar','next');
@@ -68,3 +60,36 @@ function animate() {
   timerCtx.closePath()
   x = x + window.innerWidth / 4000
 }
+
+//Para o Timer Global
+
+var intervalId
+var unidade
+var unidade_sem_decimal
+var dezena
+unidade = 1
+dezena = 0
+
+function iniciarTempo(){
+  
+
+  intervalId = setInterval(rodarTempo, 100)
+}
+
+function pararTempo(){
+  clearInterval(intervalId)
+}
+
+function rodarTempo(){
+
+  unidade += 0.1;
+
+  if(unidade % 60 == 0){
+    dezena++;
+    unidade -= 60;
+  }
+  unidade_sem_decimal = Math.trunc(unidade);
+  document.getElementById('timer-global').innerHTML = `${dezena}:${unidade_sem_decimal}`
+}
+
+document.getElementById("iniciar").addEventListener("click", iniciarTempo());
