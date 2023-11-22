@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urinary System Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap"
+    rel="stylesheet" />
+
+    <!--arquivos CSS-->
+    <link rel="stylesheet" href="arquivos.css/index.css">
+    <link rel="stylesheet" href="arquivos.css/overlay.css">
+
+</head>
+
+<body>
+    <div id="page">
+        <img src="imgs/Congrats_1.png" alt="Urinary Siystem" class="title_game">
+            
+        <div id="buttons">
+            <a href="game.html"><button id="button">Jogar</button></a>
+            <button id="button" onclick="callOverlay('credits','overlay','how')">Como jogar</button>
+            <button id="button" onclick="callOverlay('how','overlay','credits')">Créditos</button>
+        </div>
+    </div>
+
+    <!--
+    <img src="img_index/boneco-parado.png" class="boneco">
+    <img src="img_index/balao.png" class="balao">
+    S-->
+
+    <div id="overlay"> 
+        <button id="X" onclick="clearOverlay('overlay','how')">
+            <img src="imgs/X.png" id="X">
+        </button>
+        <div id="how">
+            <h3 class="title">Como Jogar</h3>
+            <div class="form">
+                <p class="p"> 
+                    Objetivo:
+                    <br>
+                    - Avance pelo sistema urinário respondendo a perguntas para alcançar ou ultrapassar 15 acertos.
+                    <br><br>
+                    <!--IMAGEM DO MAPA-->
+                    Vidas (Nefrons):
+                    <!--IMAGEM DO MAPA-->
+                    <br>
+                    - Comece com 5 néfrons. <br>
+                    - Perca um néfron por resposta incorreta. <br>
+                    - O jogo termina ao perder todos os néfrons. <br>
+                    - O néfron é a unidade funcional do rim, por isso representa as vidas
+                    <br><br>
+                    Como Iniciar:
+                    <br>
+                    - Clique em "Jogar" e depois em "Iniciar Jogo" no canto inferior esquerdo.
+                    <br><br>
+                    Desfrute do jogo educativo e boa sorte explorando o sistema urinário!
+                </p>                
+            </div>
+        </div>
+
+        <button id="X" onclick="clearOverlay('overlay','credits')">
+            <img src="imgs/X.png" id="X">
+        </button>
+
+        <div id="credits">
+            <h3 class="title">Créditos</h3>
+            <div class="name">Ana Luiza</div>
+            <div class="name">Estevão Viana</div>
+            <div class="name">Lucas Lenz</div>
+            <div class="name">Mariane</div>                
+            <div class="name">Pedro Lucas</div>
+            <div class="name">Rafael Torres</div>
+            <div class="name">Rickson Gabriel</div>
+            <div class="name">Samuel Matias</div>                
+        </div>
+    </div>
+
+    <!--arquivos JS-->
+    <script src="arquivos.js/overlay.js"></script>
+</body>
+</html>
