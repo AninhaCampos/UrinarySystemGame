@@ -1,9 +1,0 @@
-#mija{
-    animation: fall 0.3s linear infinite;
-}
-
-@keyframes fall{
-    0%{
-        trasnform: rotate
-    }
-}
