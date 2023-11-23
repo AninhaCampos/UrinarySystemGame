@@ -1,6 +1,5 @@
 let cont_perg = 0;
 let score = 0;
-const loading = true
 
 const texto_quest = document.getElementById("texto-questao");
 const opcoes = document.getElementById("barra-opcoes");
@@ -82,35 +81,31 @@ function verifica_resposta(event){
 
     buttonProx.addEventListener("click", () => {
         cont_perg++;
-        if((cont_perg < questions.length) && (cont_perg != 0) && (vidas > 0) && (loading)){        
+        if((cont_perg < questions.length) && (cont_perg != 0) && (vidas > 0)){        
             carregarPergunta();
         }else if(vidas == 0){
             clearOverlay('overlay','quiz-div'); 
             clearOverlay('sn','erro'); 
             callHow('sn','perdeu');
-        }else if((casaAtual == 16) && (vidas > 0)){
-            loading = false;
+            document.getElementById("pont").innerHTML = score + "/15";
         }
      });
 
-    function ganhaJogo(){
-        if(!loding){
+     function ganhaJogo(){
+        if( casaAtual == 16 && vidas > 0){
             clearOverlay('overlay','quiz-div');
             clearOverlay('sn','correct');
-            clearOverlay('sn','urina');
-            clearOverlay('sn','errou');
-            clearOverlay('sn','perdeu');
-            button.removeEventListener("click")
-            clearButton('next','iniciar');
+            buttonProx.removeEventListener("click") 
             callHow('sn','ganhou');
+            document.getElementById("pont").innerHTML = score + "/15";
         }
-    }
+     }
 
     function reiniciarQuiz(){
         cont_perg = 0;
-        score = 0;
         Reiniciar();
         clearOverlay('sn','perdeu');
+        clearBnt('next','iniciar');
     }
 
     
