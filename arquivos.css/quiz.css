@@ -38,12 +38,12 @@ body{
 }
 
 #texto-questao{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .option{
     background-color: #e67070;
-    font-size: 2em;
+    font-size: 1.5em;
     display: block;
     width: 40%;
     padding: 10px;
@@ -52,8 +52,7 @@ body{
     border-width: 5px 5px 5px 5px;
     border-radius: 2vw;
     border-color: white;  
-    height: 20vh;
-
+    height: 22vh;
 }
 
 .option:hover{
@@ -61,22 +60,20 @@ body{
     background-color: #ec8b8b;
 }
 
+@media only screen and (max-width: 768px) {
+    #texto-questao{
+      font-size: 1em;
+    }
+
+    .option{
+        font-size: 0.8em;
+        width: 45%;
+    }
+  }
+
 #resultado-div{
     margin-top: 20px;
 }
-
-/*
-#explicacao{
-    display: none;
-	background-color: #D3D3D3;
-	border-radius: 10px;
-	padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    max-width: 70%;
-    margin: 0 auto;
-	margin-top: 30px;
-}*/
 
 #next{
     background-color: #8b0707;

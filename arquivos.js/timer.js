@@ -42,6 +42,8 @@ function closeOverlay(){
 }
 
 function stopTimer() {
+  vidas--;
+  perderVida();
   clearInterval(intervalId)
   closeOverlay();
   segundos = 0

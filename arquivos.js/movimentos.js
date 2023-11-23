@@ -76,12 +76,7 @@ function moverParaCasa(casa) {
 
         case 15: 
         x=66.75 + 'vw';
-        y=77 + 'vh';
-        break;
-
-        case 16: 
-        x=76.25 + 'vw';
-        y=77 + 'vh';
+        y=72.25 + 'vh';
         break;
     }
         
@@ -93,31 +88,33 @@ function moverParaCasa(casa) {
 }
 
     function verificarResposta() {
-        if (casaAtual <= 15) {
+        if (casaAtual <= 16) {
             moverParaCasa(casaAtual);
             casaAtual++; 
             mudarPosicao();
-        } else {
-            alert("Parabéns! Você concluiu o jogo.");
         }
     }
 
     function mudarPosicao(){
         if (casaAtual == 2) {
             document.getElementById("gotaSg").style.transform = "rotate(0deg)";
+            document.getElementById("veia").style.opacity = "1";
         }
         if (casaAtual == 5) {
             document.getElementById("gotaSg").style.transform = "rotate(270deg)";
         }
         if (casaAtual == 6) {
+            document.getElementById("rins").style.opacity = "1";
             document.getElementById('gotaSg').style.display = "none";
             document.getElementById('gotaMj').style.display = "block";
-            clearOverlay('sn','correct')
-            callHow('sn','urina');
+            clearOverlay('sn','correct');
+            document.getElementById('sn').style.display = 'block'
+            document.getElementById('urina').style.display = 'block'
 
             //exibe a mensagem de erro por 3 segundos
             setTimeout(function (){
-                clearOverlay('sn','urina')
+                document.getElementById('sn').style.display = 'none'
+                document.getElementById('urina').style.display = 'none'
             }, 3000);
         }
         if (casaAtual == 7) {
@@ -125,11 +122,22 @@ function moverParaCasa(casa) {
         }
         if (casaAtual == 10) {
             document.getElementById("gotaMj").style.transform = "rotate(270deg)";
+            document.getElementById("ureter").style.opacity = "1";
         }
         if (casaAtual == 12) {
             document.getElementById("gotaMj").style.transform = "rotate(0deg)";
         }
+        if (casaAtual == 13) {
+            document.getElementById("bexiga").style.opacity = "1";
+        }
         if (casaAtual == 15) {
             document.getElementById("gotaMj").style.transform = "rotate(270deg)";
         }
+        if(casaAtual == 16){
+            const mija = document.getElementById("gotaMj")
+            mija.style.width = "4vw";
+            mija.style.transform = "rotate(225deg)";
+        }
     }
+
+    //MUDAR OS MOVIMENTOS PARA RESPONSIVIDADE, SÓ O TOP

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urinary System Game</title>
+    <!--FONTE-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,28 +22,30 @@
 <body>
 
     <div class="casas" id="casa1"><img src="imgs/sangue.png" id="gotaSg"><img src="imgs/gotaMj.png" id="gotaMj"></div>
-    <div class="casas" id="casa2"><img src="imgs/veia bagulhada.png" class="bloqueada veia-bagulhada"></div>
+    <div class="casas" id="casa2"><img src="imgs/veia bagulhada.png" id="veia"></div>
     <div class="casas" id="casa3"></div>
     <div class="casas" id="casa4"></div>
     <div class="casas" id="casa5"></div>
-    <div class="casas" id="casa6"><img src="imgs/rins.png" class="bloqueada rins"></div>
+    <div class="casas" id="casa6"><img src="imgs/rins.png" id="rins"></div>
     <div class="casas" id="casa7"></div>
     <div class="casas" id="casa8"></div>
     <div class="casas" id="casa9"></div>
-    <div class="casas" id="casa10"><img src="imgs/ureter.png" class="bloqueada ureter"></div>
+    <div class="casas" id="casa10"><img src="imgs/ureter.png" id="ureter"></div>
     <div class="casas" id="casa11"></div>
     <div class="casas" id="casa12"></div>
-    <div class="casas" id="casa13"><img src="imgs/bexiga.png" class="bloqueada bexiga"></div>
+    <div class="casas" id="casa13"><img src="imgs/bexiga.png" id="bexiga"></div>
     <div class="casas" id="casa14"></div>
     <div class="casas" id="casa15"></div>
     <img src="imgs/vaso.png" id="vaso">
 
-        <p class="vidas">vidas(néfrons)</p>
+    <div id="nefandvidas">
+        <p class="vidas">vidas(néfrons):</p>
         <img src="imgs/nefron.png" class="nefrons" id="nefron1">
         <img src="imgs/nefron.png" class="nefrons" id="nefron2">
         <img src="imgs/nefron.png" class="nefrons" id="nefron3">
         <img src="imgs/nefron.png" class="nefrons" id="nefron4">
         <img src="imgs/nefron.png" class="nefrons" id="nefron5">
+    </div>
 
     <button id="iniciar" onclick="callHow('overlay','quiz-div')">Iniciar Jogo</button>
     <button id="next" onclick="callHow('overlay','quiz-div')">Próxima pergunta</button>
@@ -53,12 +56,12 @@
                 <div class="timer">
                     <h4 id="time">00:00</h4>
                     <canvas
-                        id="myCanvas"
-                        width="5000"
-                        height="40"
-                        ="border: 0px; display: inline-block">
+                      id="myCanvas"
+                      width="5000"
+                      height="40"
+                      style="border: 0px; display: inline-block">
                     </canvas>
-                </div>
+                  </div>
                     <div class="form">
                         <div id="question-container">
                             <p id="texto-questao">Questão aqui</p>
@@ -92,19 +95,18 @@
                         Preste mais atenção!
                     </p><br>
                         <p class="p2">
-                            Você errou a resposta, <br>
-                            permaneça no mesmo lugar! 
+                            Você errou a resposta e perdeu uma vida! <br>
+                            <img src="imgs/nefron.png" id="nefronzinho">
                         </p>
                 </div>
 
                 <div id="urina">
-                    <p class="p1">
-                        Parabéns!
+                    <p class="pUrina">
+                        Parabéns!<img src="imgs/gotaMj.png" id="mija">
                     </p><br>
                         <p class="p2">
-                            Você  acertou a pergunta, passou pelo rim virou urina, <br>
-                            continue assim! 
-                            <img src="imgs/gotaMj.png" id="mija">
+                            Você passou pelo rim e agora é uma urina, continue assim! <br>
+                            
                         </p>
                 </div>
 
@@ -117,8 +119,6 @@
                     </p><br>
                         <p class="p2">
                             Suas vidas acabaram, tente na próxima vez!
-                            <br>
-                            Tempo: <p id="timer-global"></p>
                         </p>
                         <button id="reiniciar" onclick="reiniciarQuiz()">Reiniciar</button>
                 </div>
@@ -130,10 +130,9 @@
                     <p class="p1">
                         Parabéns, você é demais! 
                     </p><br>
-                        <p class="p2">
-                            Você ganhou o jogo!
-                            <br>
-                            Tempo: <p id="timer-global"></p>
+                        <p class="p3">
+                            Você ganhou o jogo! <br>
+                            `Você acertou: ${score} de 20 perguntas` em um tempo de x minutos.
                         </p>
                 </div>
             </div>

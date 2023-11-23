@@ -13,11 +13,10 @@ function carregarPergunta(){
     clearOverlay('sn','erro');
     const perg_atual = questions[cont_perg];
     startTimer();
-    /*iniciarTempo();*/
+    
     texto_quest.textContent = perg_atual.question;
     opcoes.innerHTML = "";
     perg_atual.options.forEach((option) => {
-        //buttonProx.style.display = "none";
         const button = document.createElement("button");
         button.textContent = option;
         button.classList.add("option");
@@ -69,15 +68,14 @@ function verifica_resposta(event){
     opcoes.querySelectorAll(".option").forEach((button) => {
         button.removeEventListener("click", verifica_resposta);
     });
-        //resp_texto.textContent = `Resposta correta: ${perg_atual.optionCorreta}`;
-        //inicio.style.display = "none";
         buttonProx.style.display = "block";
 }
 
-    iniciar.addEventListener("click", () => {
+     iniciar.addEventListener("click", () => {
         if(cont_perg < questions.length && cont_perg == 0){ 
             callHow('overlay','quiz-div')       
             carregarPergunta();
+            clearBnt('iniciar','next');
         }
     });
 
@@ -85,18 +83,21 @@ function verifica_resposta(event){
         cont_perg++;
         if((cont_perg < questions.length) && (cont_perg != 0) && (vidas > 0)){        
             carregarPergunta();
-            //buttonProx.style.display = "none"; //ISSO SOME O BOTÃO E BUGA APARECENDO O "Iniciar Jogo"
         }else if(vidas == 0){
-            /*pararTempo();*/
             clearOverlay('overlay','quiz-div'); 
             clearOverlay('sn','erro'); 
             callHow('sn','perdeu');
-        }else {
-            /*pararTempo();*/
+        }
+     });
+
+     function ganhaJogo(){
+        if(casaAtual == 16 && vidas > 0){
             clearOverlay('overlay','quiz-div');
+            clearOverlay('sn','correct');
+            buttonProx.removeEventListener("click") 
             callHow('sn','ganhou');
         }
-    });
+     }
 
     function reiniciarQuiz(){
         cont_perg = 0;
