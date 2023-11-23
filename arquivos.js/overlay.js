@@ -18,3 +18,8 @@ function clearBnt(d,e){
     document.getElementById(d).style.display = "none";
     document.getElementById(e).style.display = "block";
 }
+
+function clearButton(o,d){
+    document.getElementById(o).style.display = "none";
+    document.getElementById(d).style.display = "none";
+}

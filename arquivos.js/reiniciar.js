@@ -17,4 +17,11 @@ function Reiniciar(){
     document.getElementById('nefron4').style.display = "block"
     document.getElementById('nefron5').style.display = "block"
     casaAtual = 1;
+
+    document.getElementById('rins').style.opacity = "0.40"
+    document.getElementById('veia').style.opacity = "0.40"
+    document.getElementById('ureter').style.opacity = "0.40"
+    document.getElementById('bexiga').style.opcaity = "0.40"
+
+    clearBnt('next','iniciar');
 }

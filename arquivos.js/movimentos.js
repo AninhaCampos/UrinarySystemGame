@@ -133,11 +133,6 @@ function moverParaCasa(casa) {
         if (casaAtual == 15) {
             document.getElementById("gotaMj").style.transform = "rotate(270deg)";
         }
-        if(casaAtual == 16){
-            const mija = document.getElementById("gotaMj")
-            mija.style.width = "4vw";
-            mija.style.transform = "rotate(225deg)";
-        }
     }
 
     //MUDAR OS MOVIMENTOS PARA RESPONSIVIDADE, SÓ O TOP

@@ -24,7 +24,25 @@ body{
     color: white;
     height: 100%;
     max-height: 100%;
+    overflow-y: scroll;
 }
+
+#quiz-div::-webkit-scrollbar {
+    width: 12px;
+    }
+    #quiz-div::-webkit-scrollbar-track {
+    padding: 10px;
+    }
+    #quiz-div::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    }
+    #quiz-div::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+    }
+    #quiz-div::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.4);
+    }
 
 #barra-opcoes{
     display: flex;
@@ -52,7 +70,7 @@ body{
     border-width: 5px 5px 5px 5px;
     border-radius: 2vw;
     border-color: white;  
-    height: 22vh;
+    height: 25vh;
 }
 
 .option:hover{
