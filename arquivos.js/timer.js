@@ -63,36 +63,3 @@ function animate() {
   timerCtx.closePath()
   x = x + window.innerWidth / 3350
 }
-
-//Para o Timer Global
-
-/*var intervalId2
-var unidade//segundos
-var unidade_sem_decimal//segundos sem decimal
-var dezena//minutos
-unidade = 1
-dezena = 0
-
-function iniciarTempo(){
-  intervalId2 = setInterval(rodarTempo, 10)//intervalo pra aumentar os segundos
-}
-
-function rodarTempo(){
-
-  unidade += 0.1;
-
-  if(unidade % 600 == 0){//se a unid for divisivel por 60, aumenta minutos e diminui os segundos
-    dezena++;
-    unidade -= 600;//NAO FUNCIONA
-  }
-  unidade_sem_decimal = Math.trunc(unidade); //arredonda as unidades
-  document.getElementById('timer-global').innerHTML = `${dezena}:${unidade_sem_decimal}`//exibe o timer la
-}
-
-function pararTempo(){
-  clearInterval(intervalId2)//PARA O TEMPO
-}
-
-
-
-document.getElementById("iniciar").addEventListener("click", iniciarTempo);*/

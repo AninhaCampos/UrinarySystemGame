@@ -90,7 +90,7 @@ const questions = [
     {
         question: '(UNIFOR) - A ingestão de bebidas alcoólicas acarreta, após algum tempo, aumento na frequência de micção, sendo eliminado um grande volume de urina. Tal fato é devido: ',
         options: ["À inibição do hormônio antidiurético.","Ao aumento da pressão dos órgãos internos. ","À estimulação renal e digestiva.","À mudança da pressão sanguínea. "],
-        optionCorreta: "À inibição do hormônio antidiurético. ",
+        optionCorreta: "À inibição do hormônio antidiurético.",
     },
     {
         question: '(UFPE) - No homem, aproximadamente 99% da água do filtrado glomerular são reabsorvidos, principalmente ao nível do(a)',

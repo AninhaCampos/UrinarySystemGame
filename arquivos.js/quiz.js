@@ -38,6 +38,7 @@ function verifica_resposta(event){
         clearOverlay('sn','urina');
         clearOverlay('overlay','quiz-div'); 
         callHow('sn','correct');
+        audioAcerto();
         
         //exibe a mensagem de acerto por 3 segundos
         setTimeout(function (){
@@ -54,8 +55,9 @@ function verifica_resposta(event){
         clearOverlay('sn','perdeu');
         clearOverlay('sn','ganhou');
         clearOverlay('sn','urina');
-        clearOverlay('overlay','quiz-div'); 
+        clearOverlay('overlay','quiz-div');
         callHow('sn','erro');
+        audioErro();
 
         //exibe a mensagem de erro por 3 segundos
         setTimeout(function (){
@@ -68,7 +70,6 @@ function verifica_resposta(event){
     opcoes.querySelectorAll(".option").forEach((button) => {
         button.removeEventListener("click", verifica_resposta);
     });
-        buttonProx.style.display = "block";
 }
 
      iniciar.addEventListener("click", () => {
@@ -79,33 +80,43 @@ function verifica_resposta(event){
         }
     });
 
-    buttonProx.addEventListener("click", () => {
+    function carregarProximaPergunta() {
         cont_perg++;
-        if((cont_perg < questions.length) && (cont_perg != 0) && (vidas > 0)){        
+        if ((cont_perg < questions.length) && (cont_perg != 0) && (vidas > 0)) {
+            callHow('overlay', 'quiz-div');
             carregarPergunta();
-        }else if(vidas == 0){
-            clearOverlay('overlay','quiz-div'); 
-            clearOverlay('sn','erro'); 
-            callHow('sn','perdeu');
-            document.getElementById("pont").innerHTML = score + "/15";
+        } else if (vidas == 0) {
+            clearOverlay('overlay', 'quiz-div');
+            clearOverlay('sn', 'erro');
+            callHow('sn', 'perdeu');
+            audioPerdeu();
         }
-     });
+    }
+    buttonProx.addEventListener("click", carregarProximaPergunta);
 
-     function ganhaJogo(){
-        if( casaAtual == 16 && vidas > 0){
-            clearOverlay('overlay','quiz-div');
-            clearOverlay('sn','correct');
-            buttonProx.removeEventListener("click") 
-            callHow('sn','ganhou');
-            document.getElementById("pont").innerHTML = score + "/15";
-        }
-     }
+     function ganharJogo() {
+            // Ações quando o jogador atinge a casa 16 e ganha o jogo
+            clearOverlay('overlay', 'quiz-div');
+            clearOverlay('sn', 'correct');
+            clearOverlay('sn', 'perdeu');
+            clearOverlay('sn', 'erro');
+            clearOverlay('sn', 'urina');
+            callHow('sn', 'ganhou');
+            audioParabens();
+    
+            // Remove o event listener do botão de próxima pergunta
+            buttonProx.removeEventListener("click", carregarProximaPergunta);
+            buttonProx.addEventListener("click", ganharJogo);
+    }
 
     function reiniciarQuiz(){
         cont_perg = 0;
+        score = 0;
+        buttonProx.removeEventListener("click", ganharJogo);
+        buttonProx.addEventListener("click", carregarProximaPergunta);
+        console.log("adiconando...");
         Reiniciar();
         clearOverlay('sn','perdeu');
-        clearBnt('next','iniciar');
     }
 
     

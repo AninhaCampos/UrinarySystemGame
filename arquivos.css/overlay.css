@@ -157,7 +157,7 @@ background: rgba(255, 255, 255, 0.4);
   top: 50%;
   left: 50%;
   width: 40vw;
-  height: 40vh;
+  height: 60vh;
   border: 1rem solid white;
   border-radius: 20px;
   transform: translate(-50%, -50%);
@@ -165,22 +165,22 @@ background: rgba(255, 255, 255, 0.4);
   z-index: 3;
   text-align: center;
   font-size: 1.5rem;
-  /*centralizar*/
 }
 
 @media only screen and (max-width: 768px) {
   #sn{
     max-width: 95vw;
     width: 90%;
-    height: 70%;
+    height: 60%;
   }
 }
 
 #correct, #erro, #perdeu, #ganhou, #urina{
   padding: 1px;
   color: white;
-  margin: 0;
+  margin: 0 auto;
   height: calc(100% - 6.5rem);
+  position: relative;
 }
 
 @media only screen and (max-width: 768px) {
@@ -189,35 +189,41 @@ background: rgba(255, 255, 255, 0.4);
   }
 }
 
-#nefronzinho{
-  position: absolute;
-  width: 5em;
-}
-
-#mija{
-  position: absolute;
-  width: 6em;
-}
-
 .p1{
   font-size: 2.5rem;
   border-bottom: 1px solid white;
   padding: 2rem 2rem 2rem 2rem;
 }
 
-.pUina{
-  font-size: 2.5rem;
-  border-bottom: 1px solid white;
+@media only screen and (max-width: 768px) {
+  .p1{
+    font-size: 2rem;
+  }
+}
+
+.nefronzinho{
+  margin: 2vh;
+  width: 8vw;
+  position: relative;
+}
+
+.Urina{
+  margin: 2vh;
+  width: 10vw;
+  position: relative;
 }
 
 @media only screen and (max-width: 768px) {
-  .p1, .pUrina{
-    font-size: 2rem;
+  .nefronzinho{
+    width: 18vw;
   }
-  #nefronzinho, #mija{
-    width: 3.5em;
+
+  .Urina{
+    width: 16vw;
   }
 }
+
+
 
 
 /*FIM da estilização "sn-GAME.HTML"*/

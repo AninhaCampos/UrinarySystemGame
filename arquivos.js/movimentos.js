@@ -78,13 +78,18 @@ function moverParaCasa(casa) {
         x=66.75 + 'vw';
         y=72.25 + 'vh';
         break;
+
+        case 16:
+        x=66.75 + 'vw';
+        y=75.25 + 'vh';
     }
         
     document.getElementById("gotaSg").style.left = x;
     document.getElementById("gotaSg").style.top = y;
     document.getElementById("gotaMj").style.left = x;
     document.getElementById("gotaMj").style.top = y;
-            
+    document.getElementById("mijaAnima").style.left = x;
+    document.getElementById("mijaAnima").style.top = y;
 }
 
     function verificarResposta() {
@@ -110,6 +115,7 @@ function moverParaCasa(casa) {
             clearOverlay('sn','correct');
             document.getElementById('sn').style.display = 'block'
             document.getElementById('urina').style.display = 'block'
+            audioUrina();
 
             //exibe a mensagem de erro por 3 segundos
             setTimeout(function (){
@@ -133,11 +139,20 @@ function moverParaCasa(casa) {
         if (casaAtual == 15) {
             document.getElementById("gotaMj").style.transform = "rotate(270deg)";
         }
-        if(casaAtual == 16){
-            const mija = document.getElementById("gotaMj")
-            mija.style.width = "12vw";
-            mija.style.transform = "rotate(225deg)";
+        if (casaAtual == 16) {
+            animationUrina();
+            reiniciarAnimacao();
+            ganharJogo();
         }
     }
+
+const mijaAnm = document.getElementById("mijaAnima");
+function animationUrina(){
+        document.getElementById("gotaMj").style.display = 'none';
+        audioMijando();
+        mijaAnm.style.display = 'block';
+        mijaAnm.style.rotate = "225deg";
+        mijaAnm.style.width = "6vw";
+}
 
     //MUDAR OS MOVIMENTOS PARA RESPONSIVIDADE, SÓ O TOP

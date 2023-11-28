@@ -16,12 +16,53 @@
     <link rel="stylesheet" href="arquivos.css/game.css">
     <link rel="stylesheet" href="arquivos.css/overlay.css">
     <link rel="stylesheet" href="arquivos.css/quiz.css">
-   
+    <link rel="stylesheet" href="arquivos.css/animation.css">
     
+    <style>
+        @media only screen and (max-width: 768px) {
+            #next{
+                font-size: 3vh;
+                width: 22vw;
+                height: 10vh;
+                margin: 0;
+                left: 1.5%;
+                top: 88%;
+            }
+        }
+    </style>
+
 </head>
 <body>
 
-    <div class="casas" id="casa1"><img src="imgs/sangue.png" id="gotaSg"><img src="imgs/gotaMj.png" id="gotaMj"></div>
+    <audio id="audioErro">
+        <source src="audios/error_CDOxCYm.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audioAcerto">
+        <source src="audios/ding-sound-effect_2.mp3" type="audio/mpeg">
+    </audio>    
+
+    <audio id="audioUrina">
+        <source src="audios/anime-wow-sound-effect.mp3" type="audio/mpeg">
+    </audio>  
+    
+    <audio id="audioPerdeu">
+        <source src="audios/downer_noise.mp3" type="audio/mpeg">
+    </audio> 
+
+    <audio id="audioDescarga">
+        <source src="audios/zoeira-efeito-descarga.mp3" type="audio/mpeg">
+    </audio> 
+
+    <audio id="audioMijando">
+        <source src="audios/Urination - QuickSounds.com.mp3" type="audio/mpeg">
+    </audio> 
+
+    <audio id="audioParabens">
+        <source src="audios/tmp1rp0ceo8.mp3" type="audio/mpeg">
+    </audio> 
+
+    <div class="casas" id="casa1"><img src="imgs/sangue.png" id="gotaSg"><img src="imgs/gotaMj.png" id="gotaMj"><img src="imgs/gotaMj.png" id="mijaAnima"></div>
     <div class="casas" id="casa2"><img src="imgs/veia bagulhada.png" id="veia"></div>
     <div class="casas" id="casa3"></div>
     <div class="casas" id="casa4"></div>
@@ -95,18 +136,20 @@
                         Preste mais atenção!
                     </p><br>
                         <p class="p2">
-                            Você errou a resposta e perdeu uma vida! <br>
-                            <img src="imgs/nefron.png" id="nefronzinho">
+                            Você errou a resposta <br>
+                            e perdeu uma vida! <br>
+                            <img src="imgs/nefron.png" class="nefronzinho">
                         </p>
                 </div>
 
                 <div id="urina">
-                    <p class="pUrina">
-                        Parabéns!<img src="imgs/gotaMj.png" id="mija">
+                    <p class="p1">
+                        Parabéns!
                     </p><br>
                         <p class="p2">
-                            Você passou pelo rim e agora é uma urina, continue assim! <br>
-                            
+                            Você passou pelo rim e agora <br>
+                            é uma urina, continue assim! <br>
+                            <img src="imgs/GOTAMJ.PNG" class="Urina">
                         </p>
                 </div>
 
@@ -118,8 +161,8 @@
                         Você perdeu o jogo!
                     </p><br>
                         <p class="p2">
-                            Suas vidas acabaram, tente na próxima vez! <br>
-                            Pontuação: <p id="pont">0</p>
+                            Suas vidas acabaram, <br>
+                            tente na próxima vez!
                         </p>
                         <button id="reiniciar" onclick="reiniciarQuiz()">Reiniciar</button>
                 </div>
@@ -132,9 +175,10 @@
                         Parabéns, você é demais! 
                     </p><br>
                         <p class="p3">
-                            Você ganhou o jogo! <br>
-                            Pontuação: <p id="pont">0</p>
+                            Você ganhou o jogo, <br>
+                            e chegou ao seu destino!
                         </p>
+                        <button id="reiniciar" onclick="reiniciarQuiz()">Reiniciar</button>
                 </div>
             </div>
 
@@ -148,6 +192,7 @@
     <script src="arquivos.js/vidas.js"></script>
     <script src="arquivos.js/questions.js"></script>
     <script src="arquivos.js/reiniciar.js"></script>
+    <script src="arquivos.js/audios.js"></script>
     <script>
         clearOverlay('overlay','how')
     </script>

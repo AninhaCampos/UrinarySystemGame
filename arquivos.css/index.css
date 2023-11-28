@@ -30,7 +30,7 @@ button:hover{
 }
 
 .title_game{
-    width: 30rem;
+    width: 25rem;
     transition: transform 2.0s ease;
     animation: swing 0.8s infinite;
 }
@@ -41,7 +41,7 @@ button:hover{
     }
 
     50% {
-        transform: rotate(5deg);
+        transform: rotate(10deg);
     }
 
     100% {
