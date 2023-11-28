@@ -301,15 +301,15 @@ button:hover{
 
 @media only screen and (max-width: 768px) {
     #iniciar{
-        font-size: 3vh;
+        font-size: 1em;
         width: 22vw;
-        height: 10vh;
+        height: 8vh;
         margin: 0;
         left: 1.5%;
-        top: 88%;
+        top: 90%;
     }
     #reiniciar{
-        font-size: 3vh;
+        font-size: 1em;
         width: 20vw;
     }
 }
