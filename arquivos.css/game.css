@@ -308,10 +308,6 @@ button:hover{
         left: 1.5%;
         top: 90%;
     }
-    #reiniciar{
-        font-size: 1em;
-        width: 20vw;
-    }
 }
 
 .timer {
