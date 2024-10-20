@@ -1,17 +1,29 @@
-# Urinary-System-Game
+# Urinary System Game
 
-Este repositório contém um jogo educativo sobre o sistema urinário, desenvolvido como um projeto conjunto para as disciplinas de Web e Biologia. O jogo foi criado usando HTML, CSS e JavaScript.
+Bem-vindo ao repositório Urinary System Game! Este projeto foi desenvolvido como trabalho prático final da matéria WEB1 em conjunto com a disciplina Biologia no curso técnico de Informática do CEFET-MG. Este repositório contém um jogo educativo sobre o sistema urinário que foi criado usando HTML, CSS e JavaScript.
 
-Este projeto foi possível graças ao trabalho duro e dedicação dos seguintes colaboradores:
+# Requisitos:
+- Visual Studio Code
 
-Ana Luiza Gonçalves Campos
+# Configuração⚙️
 
-Estevão Viana de Paula
+Siga as etapas abaixo:
 
-Lucas Lenz Chaves da Silva
+1. Clone ou Baixe o Repositório
+    - Baixe e extraia o arquivo zip, copie os arquivos para uma pasta
+      
+2. Configuração do Projeto
+    - Abra a pasta no Visual Studio Code
 
-Pedro Lucas Moreira
+3. Execute o projeto
 
-Rafael Torres 
+# Colaboradores:
+- Ana Luiza Gonçalves Campos
+- Estevão Viana de Paula
+- Lucas Lenz Chaves da Silva
+- Pedro Lucas Moreira
+- Rafael Torres 
+- Samuel Matias 
 
-Samuel Matias
+# Link: 
+https://aninhacampos.github.io/UrinarySystemGame/
